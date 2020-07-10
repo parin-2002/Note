@@ -71,6 +71,9 @@ html
   <div class="card pt-2 pl-2 mt-1">
    <a href="#it" class="mb-1 text-dark"><h6 class="h6">Importent Topic For Nodejs</h6></a>
   </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#cm" class="mb-1 text-dark"><h6 class="h6">Create Module And Use</h6></a>
+  </div>
   <!-- yes it used-->
   
  </div>
@@ -127,6 +130,48 @@ html
   </code>
  </pre>
 </div>
+
+<div class="card py-2 px-2 mt-2" id="cm" id="bg">
+<h3 class="pl-2">Create Module And Use</h3>
+<pre>
+<h3>module.js</h3><hr>
+<code class="language-javascript">
+   exports.sum=(a,b)=>(a+b);//arrow function short method
+   //first method for exports
+   function name(name)
+    {
+    return name;
+    }
+   module.exports.name=name;
+   //second method for exports
+</code>
+</pre>
+<pre>
+<h3>work.js</h3><hr>
+<code class="language-javascript">
+   const mymodule=require('./module.js');
+   //import module.js file and use module.js file function
+   console.log(mymodule.sum(10,20));
+   console.log(mymodule.name('mr.been'));
+   console.log(__filename); //see file path
+   console.log(__dirname);  //see file dir name 
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-javascript">
+   $ node work.js
+   30
+   mr.been
+   /storage/emulated/0/DCIM/node/work.js
+   /storage/emulated/0/DCIM/node
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
 <!--use it -->
 
 </div>
