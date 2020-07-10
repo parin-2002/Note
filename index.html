@@ -77,6 +77,9 @@ html
   <div class="card pt-2 pl-2 mt-1">
    <a href="#path" class="mb-1 text-dark"><h6 class="h6">Path Module</h6></a>
   </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#fs1" class="mb-1 text-dark"><h6 class="h6">Using fs Module Read File</h6></a>
+  </div>
   <!-- yes it used-->
   
  </div>
@@ -229,6 +232,36 @@ html
    name: 'work'
    }
    format function:-C:\bob\mr.been/work.js
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="fs1" id="bg">
+<h3 class="pl-2">title</h3>
+<pre>
+<code class="language-javascript">
+    var fs=require('fs');
+    //import fs module
+    fs.readFile('module.js','utf-8',function(err,data)
+    {
+    console.log(data);
+    });
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-javascript">
+    $ node work.js
+    exports.sum=(a,b)=>(a+b);//arrow function short method
+    //first method for exports
+    function name(name)
+    {
+    return name;
+    }
+    module.exports.name=name;
   </code>
  </pre> 
 </div>
