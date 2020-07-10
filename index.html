@@ -80,6 +80,9 @@ html
   <div class="card pt-2 pl-2 mt-1">
    <a href="#fs1" class="mb-1 text-dark"><h6 class="h6">Using fs Module Read File</h6></a>
   </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#wsa" class="mb-1 text-dark"><h6 class="h6">Write File Using fs Module with Synchronous&Asynchronous</h6></a>
+  </div>
   <!-- yes it used-->
   
  </div>
@@ -262,6 +265,51 @@ html
     return name;
     }
     module.exports.name=name;
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="wsa" id="bg">
+<h3 class="pl-2">Write File Using fs module with Synchronous&Asynchronous</h3>
+<pre>
+<code class="language-javascript">
+   var fs=require('fs');
+   //import fs module
+   /* asynchronous code
+   //write data in file
+   fs.writeFile('module.js','console.log("mr.been")',function(err)
+   {
+   console.log('data write');
+   });
+   //filename,data,function pass in a function
+   
+   //append data in file
+   fs.appendFile('module.js','console.log("mr.been say hello")',function(err)
+   {
+   console.log('data append')
+   });
+   //filename,data,function pass in a function
+   */
+   
+   //synchronous code
+   fs.writeFileSync('module.js','console.log("mr.been")');
+   fs.appendFileSync('module.js','console.log("mr.been say hello")');
+   
+   //synchronous:-code run line by line
+   //Ex.see uncomment code upside and run it
+   //asynchronous:-code not run line by line 
+   //Ex.see comment code upside and run it
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+   <h3>module.js</h3><hr>
+  <code class="language-javascript">
+    console.log("mr.been")
+    console.log("mr.been say hello")
   </code>
  </pre> 
 </div>
