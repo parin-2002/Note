@@ -16,7 +16,7 @@ html
  font-size:16px;
  font-family: 'Raleway', sans-serif;
  background:#111111;
- height:44px;
+ height:55px;
  line-height:44px;
  display:flex;
  justify-content:space-between;
@@ -55,6 +55,9 @@ html
 
 <header id="header">
 		<a class="logo" href="https://codehelperdesk.blogspot.com">CodeHelperDesk</a>
+		<div class="mt-2 mr-3">
+	       <input id="searchinput" onkeyup="search()" class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+		</div>
 </header>
 
 <!-- write code -->
@@ -94,7 +97,7 @@ html
 <div class="mx-2">
 <!--use it add new code use it code-->
 <div class="card py-2 px-2" id="it" id="bg">
-<h3 class="pl-2">Importent Topic For Nodejs</h3>
+<h3 class="pl-2 sea">Importent Topic For Nodejs</h3>
 <pre>
 <code class="language-javascript">
     //Nodejs is a JavaScript runtime built on chrome's v8 JavaScript engine for executing JavaScript code
@@ -141,7 +144,7 @@ html
 </div>
 
 <div class="card py-2 px-2 mt-2" id="cm" id="bg">
-<h3 class="pl-2">Create Module And Use</h3>
+<h3 class="pl-2 sea">Create Module And Use</h3>
 <pre>
 <h3>module.js</h3><hr>
 <code class="language-javascript">
@@ -182,7 +185,7 @@ html
 </div>
 
 <div class="card py-2 px-2 mt-2" id="path" id="bg">
-<h3 class="pl-2">Path Module</h3>
+<h3 class="pl-2 sea">Path Module</h3>
 <pre>
 <code class="language-javascript">
     const path=require('path');
@@ -242,7 +245,7 @@ html
 </div>
 
 <div class="card py-2 px-2 mt-2" id="fs1" id="bg">
-<h3 class="pl-2">Using fs Module Read File</h3>
+<h3 class="pl-2 sea">Using fs Module Read File</h3>
 <pre>
 <code class="language-javascript">
     var fs=require('fs');
@@ -272,7 +275,7 @@ html
 </div>
 
 <div class="card py-2 px-2 mt-2" id="wsa" id="bg">
-<h3 class="pl-2">Write File Using fs module with Synchronous&Asynchronous</h3>
+<h3 class="pl-2 sea">Write File Using fs module with Synchronous&Asynchronous</h3>
 <pre>
 <code class="language-javascript">
    var fs=require('fs');
@@ -324,6 +327,26 @@ html
 </div>
 <!-- end code -->
 
+<script type="text/javascript">
+ var serchid=document.getElementById("searchinput");
+ var ids=document.getElementsByClassName("sea");
+ function search() 
+ {
+   var serchtext=serchid.value;
+   for(var i=0;i<ids.length;i++){
+     var data=ids[i].innerHTML.toLowerCase();
+     var serchtext=serchtext.toLowerCase();
+     if(data.includes(serchtext)) 
+     {
+      ids[i].parentElement.style.display="block";
+     }
+     else
+     {
+      ids[i].parentElement.style.display="none";
+     }
+   }
+ }
+</script>
 <script src="folder/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
