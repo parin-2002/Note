@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Python</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ForCode/folder/prism.css">
+<<style type="text/css">
+html
+{
+ scroll-behavior:smoth;
+}
+#header
+{
+ color:rgba(255,255,255, 0.5);
+ font-size:16px;
+ font-family: 'Raleway', sans-serif;
+ background:#111111;
+ height:55px;
+ line-height:44px;
+ display:flex;
+ justify-content:space-between;
+ left:0;
+ top:0;
+ position:fixed;
+ width:100%;
+ z-index:10001;
+}
+.logo
+{
+ color:#FFFFFF;
+ padding:0px 1.25rem;
+ font-size:1rem;
+ font-family: 'Raleway', sans-serif;
+ font-weight:600;
+ height:inherit;
+ line-height:inherit;
+ text-decoration:none;
+}
+
+#body
+ {
+  background-image:url('https://1.bp.blogspot.com/-klXl-BhGkUE/XwZ-3Z4JvpI/AAAAAAAACDs/1Lrzkpa7kBYOTRv42XIMLwyzf48HQOvdgCK4BGAsYHg/s384/images.jpeg');
+  background-attachment:fixed;
+ }
+ 
+.h6:hover
+{
+ color:blue;
+}
+</style> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+<body id="body">
+
+<header id="header">
+		<a class="logo" href="">CodeHelperDesk</a>
+		<div class="mt-2 mr-3">
+		 <input id="searchinput" onkeyup="search()" class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+		</div>
+</header>
+
+<!-- write code -->
+<div class="row mt-5">
+<!--code block -->
+
+<div class="col-sm-4">
+<div class="mx-2">
+<!-- Add page link -->
+
+<div class="card py-2 px-2 mb-3">
+  <h2 class="text-dark">Python Code List</h2>
+  
+  <!--use it for new link-->
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#1hello" class="mb-1 text-dark"><h6 class="h6">Hello World In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#module" class="mb-1 text-dark"><h6 class="h6">Module In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#dc" class="mb-1 text-dark"><h6 class="h6">DataType & TypeCasting</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#sip" class="mb-1 text-dark"><h6 class="h6">String In Python & Sliceing</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#list" class="mb-1 text-dark"><h6 class="h6">List In Python & Sliceing</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+    <a href="#ifelse" class="mb-1 text-dark"><h6 class="h6">ifelse & elif</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#loop" class="mb-1 text-dark"><h6 class="h6">for & while loop</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#fun" class="mb-1 text-dark"><h6 class="h6">Function In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#ex" class="mb-1 text-dark"><h6 class="h6">Exception In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#dict" class="mb-1 text-dark"><h6 class="h6">Dictionary In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#mfr" class="mb-1 text-dark"><h6 class="h6">map,filter,reduce In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#mini" class="mb-1 text-dark"><h6 class="h6">args kwargs enumerater import lambda decorater</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#oop" class="mb-1 text-dark"><h6 class="h6">oop In Python</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#spd" class="mb-1 text-dark"><h6 class="h6">setter property deleter</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#lfc" class="mb-1 text-dark"><h6 class="h6">forelse loop, function caching,for loop in list</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#tcr" class="mb-1 text-dark"><h6 class="h6">try catch raise</h6></a>
+  </div>
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#cpkg" class="mb-1 text-dark"><h6 class="h6">create package</h6></a>
+  </div>
+  <!-- yes it used-->
+  
+ </div>
+<!-- upside -->
+</div>
+</div>
+<div class="col-sm-8">
+<div class="mx-2">
+<!--use it add new code use it code-->
+<div class="card py-2 px-2" id="1hello" id="bg">
+<h3 class="pl-2 sea">😅</h3>
+<pre>
+<code class="language-python">
+   File io
+   Generator
+   print(id(objectname)) #retuen address
+   print(dir(objectname))#return all methods in class
+   OS module
+   request module
+   json module
+   pickle module
+   re module (regular Expression) 
+   argparse module (command line utiliti)
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="1hello" id="bg">
+<h3 class="pl-2 sea">Hello World In Python</h3>
+<pre>
+<code class="language-python">
+   #hello word in python
+   print('_hello word_')
+   print(5*'_hello_\n')
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+   $ python 1hello.py
+    _hello word_
+    _hello_
+    _hello_
+    _hello_
+    _hello_
+    _hello_
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="module" id="bg">
+<h3 class="pl-2 sea">Module In Python</h3>
+<pre>
+<code class="language-python">
+   """
+   Power of Python is a Module. 
+   what is module?
+   ->module is a other file function or class this function or class you can use your file using import Statment. 
+     Ex.File1 have a one function and this function name hello. 
+       I am important File1 code in File2
+       import File1 & from File1 import hello
+   ->pip
+      pip is a package manager in Python. 
+      you can download many package using pip
+      Ex. pip install pygame
+      this all are package available in online.
+      what is package?
+      package have many class or function inside a file. 
+      import package and use this code. 
+   """
+</code>
+</pre>
+</div> 
+
+<div class="card py-2 px-2 mt-2" id="dc" id="bg">
+<h3 class="pl-2 sea">Data type & Type Casting</h3>
+<pre>
+<code class="language-python">
+   """
+   Text Type:str
+   Numeric Types:int,float,complex
+   Sequence Types:list,tuple,range
+   Mapping Type:dict
+   Set Types:set,frozenset
+   Boolean Type:bool
+   Binary Types:bytes,bytearray,memoryview
+   """
+   a='hi'
+   print("a='hi':-",type(a))
+   a=5
+   print('a=5   :-',type(a))
+   a=5.5
+   print('a=5.5 :-',type(a))
+   a=1j
+   print('a=1j  :-',type(a))
+   a=[5,6]
+   print('a=[]  :-',type(a))
+   a=(4,5)
+   print('a=()  :-',type(a))
+   a={'a':'A'}
+   print('a={}  :-',type(a))
+   a=True
+   print('a=True:-', type(a))
+   
+   a=5
+   print('int to float :-',float(a))
+   a=5.5
+   print('float to int :-',int(a))
+   a=(4,5,6)
+   print('tuple to list :-',list(a))
+   a=[6,7,5]
+   print('list to tuple :-',tuple(a))
+   #dictionry convert in list or tuple but direct not posible Ex.
+   a={'a':'A','b':'B','c':'C'}
+   a=[(a,b) for a,b in a.items()]#list inside loop
+   print('dict to list :-',a)
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    a='hi':- class 'str'
+    a=5   :- class 'int'
+    a=5.5 :- class 'float'
+    a=1j  :- class 'complex'
+    a=[]  :- class 'list'
+    a=()  :- class 'tuple'
+    a={}  :- class 'dict'
+    a=True:- class 'bool'
+    
+    int to float  :- 5.0
+    float to int  :- 5
+    tuple to list :- [4, 5, 6]
+    list to tuple :- (6, 7, 5)
+    dict to list  :-[('a', 'A'), ('b', 'B'), ('c', 'C')]
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="sip" id="bg">
+<h3 class="pl-2 sea">String In Python & sliceing</h3>
+<pre>
+<code class="language-python">
+   #string in python
+   name='mr.been say! Hello Friend'
+   #name[start:end:mising]  if you are not write start or end by defult set value start=0 and end=sizeofstring
+   print(name)
+   print('start_end:-',name[0:10])
+   print('start_end_mising:-',name[:10:2])
+   #see upside line in output one charecter mising
+   print('using -number:-',name[:-1:])
+   """ in -number
+   m  |r  |.  |b  |e  |e  |n  |    |s |same full str
+   -22|-21|-20|-19|-18|-17|-16|-15|-14|
+   """
+   print('revers:-',name[::-1])
+   #many string function available you can see it in w3school
+   li=['a','b','c','d','e']
+   print('join :-',','.join(li))
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    mr.been say! Hello Friend
+    start_end       :- mr.been sa
+    start_end_mising:- m.ens
+    using -number   :- mr.been say! Hello Frien
+    revers          :- dneirF olleH !yas neeb.rm
+    join            :- a,b,c,d,e
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="list" id="bg">
+<h3 class="pl-2 sea">List In Python & Sliceing</h3>
+<pre>
+<code class="language-python">
+   #list in python
+   name=['parin','akash','dhruvin','abhi','vraj','darshit','kalu']
+   print(type(name))
+   print('list slicing:-',name[0:2])#same of string
+   #sarch and see list function w3school is best
+   
+   name=[[1,'a'],[2,'b'],[3,'c']]
+   print(name)
+   for x,y in name:
+      print(x,y)
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    class 'list'
+    list slicing:- ['parin', 'akash']
+    [[1, 'a'], [2, 'b'], [3, 'c']]
+    1 a
+    2 b
+    3 c
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="ifelse" id="bg">
+<h3 class="pl-2 sea">ifelse & elif</h3>
+<pre>
+<code class="language-python">
+   a=5
+   if(a == 5):
+      print('yes')
+   else:
+      print('No')
+   
+   a=19
+   if(a<10):
+      print('1 to 9')
+   elif(a>=10 and a<=20):
+      print('10 to 19')
+   else:
+      print('big of 20')
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    yes
+    10 to 19
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="loop" id="bg">
+<h3 class="pl-2 sea">for & while Loop</h3>
+<pre>
+<code class="language-python">
+   for i in range(10):
+      if(i==5):
+        continue
+      if(i==9):
+        break
+      print(i,end='')
+   
+   i=1
+   while i<=10:
+     if(i==5):
+        i=i+1
+        continue
+     if(i==9):
+        i=i+1
+        break
+     print(i,end='')
+     i=i+1
+  #same out put forin and while loop
+  
+   list=[5,3,6,7]
+   for i in list:
+      print(i,end='')
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    12346789
+    5367
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="fun" id="bg">
+<h3 class="pl-2 sea">Function In Python</h3>
+<pre>
+<code class="language-python">
+   #function
+   def hello():
+      print('hello')
+   def hi(name):
+      return f'hi {name}'
+   hello()
+   print(hi('mr.been'))
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    hello
+    hi mr.been
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="ex" id="bg">
+<h3 class="pl-2 sea">Exception In Python</h3>
+<pre>
+<code class="language-python">
+   try:
+      add()
+   except Exception as e:
+      print(e)
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    name 'add' is not defined
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="dict" id="bg">
+<h3 class="pl-2 sea">Dictionary In Python</h3>
+<pre>
+<code class="language-python">
+   student={
+   'mr.been':'been',
+   'ravi':'gajera',
+   'mayur':'patoliya',
+   'divyesh':{'ATKT':1,'subject':'c'}
+   }
+   
+   print(type(student))
+   print(student['mr.been'])
+   print(student['divyesh']['ATKT'])
+   
+   #forinloop
+   a=student.keys()
+   print(a)
+   for a in student.keys():
+      print(a)
+   
+   a=student.items()
+   print(a)
+   for a in student.items():
+      print(a)
+   
+   a=student.values()
+   print(a)
+   for a in student.values():
+      print(a)
+   
+   a=student.copy()
+   print(a)
+   
+   a=student.pop('divyesh')#return pop element
+      print(student)
+   
+   a=student.popitem()#return pop element
+   print(student)
+   
+   student.update({'name':'names'})
+   print(student)#add one data
+   
+   a=student.get('mr.been')
+   print(a)
+   
+   a=('a','b','c','d')
+   b=1
+   dictdata=dict.fromkeys(a,b)
+   print(dictdata)
+   
+   #importent topic 
+   #set
+   #tuple 
+   data=(1,2,4,6,44,22)
+   print(type(data))
+   #see tuple function in w3school also File io
+   
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    <class 'dict'>
+    been
+    1
+    dict_keys(['mr.been', 'ravi', 'mayur', 'divyesh'])
+    mr.been
+    ravi
+    mayur
+    divyesh
+    dict_items([('mr.been', 'been'), ('ravi', 'gajera'), ('mayur', 'patoliya'), ('divyesh', {'ATKT': 1, 'subject': 'c'})])
+    ('mr.been', 'been')
+    ('ravi', 'gajera')
+    ('mayur', 'patoliya')
+    ('divyesh', {'ATKT': 1, 'subject': 'c'})
+    dict_values(['been', 'gajera', 'patoliya', {'ATKT': 1, 'subject': 'c'}])
+    been
+    gajera
+    patoliya
+    {'ATKT': 1, 'subject': 'c'}
+    {'mr.been': 'been', 'ravi': 'gajera', 'mayur': 'patoliya', 'divyesh': {'ATKT': 1, 'subject': 'c'}}
+    {'mr.been': 'been', 'ravi': 'gajera', 'mayur': 'patoliya'}
+    {'mr.been': 'been', 'ravi': 'gajera'}
+    {'mr.been': 'been', 'ravi': 'gajera', 'name': 'names'}
+    been
+    {'a': 1, 'b': 1, 'c': 1, 'd': 1}
+    class 'tuple'
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="mfr" id="bg">
+<h3 class="pl-2 sea">map,filter,reduce In Python</h3>
+<pre>
+<code class="language-python">
+   #map
+   n=['1','2','3']
+   n=list(map(int,n))
+   print(type(n[0]))
+   
+   n=list(map(lambda x:x*x,n))
+   print(n)
+   
+   def sq(x):
+   return x*x
+   def cu(x):
+   return x*x*x
+   funlist=[sq,cu]
+   for i in range(5):
+      val=list(map(lambda x:x(i),funlist))
+      print(val)
+   
+   #filter
+   number=[6,3,8,84,7,3,7,4,9,0,42,45,89,1]
+   fn=list(filter(lambda x:x>5,number))
+   print(fn)
+   
+   #reduce
+   from functools import reduce
+   number=[6,4,2,8]
+   sum=reduce(lambda x,y:x+y,number)
+   print(sum)
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    <class 'int'>
+    [1, 4, 9]
+    [0, 0]
+    [1, 1]
+    [4, 8]
+    [9, 27]
+    [16, 64]
+    [6, 8, 84, 7, 7, 9, 42, 45, 89]
+    20
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="mini" id="bg">
+<h3 class="pl-2 sea">Mini Topics In Python</h3>
+<pre>
+<code class="language-python">
+   #lambda function
+   sum=lambda x,y:x+y
+   print(sum(6,4))
+   
+   lst=[[5,3],[7,3],[9,2],[2,5]]
+   lst.sort(key=lambda x:x[1])
+   print(lst)
+   
+   #f string
+   name='mr.been'
+   print(f'hello freind! {name}')
+   
+   #*args or **kwargs
+   lst=['parin','aksha','bob','raj']
+   def fun(name,*args):
+   print(name,args)
+   fun('mr.been',lst)
+   
+   li={'name':'N','sername':'S'}
+   def funk(na,**kwargs):
+   print(na,kwargs)
+   funk('mr.been',**li)
+   
+   #enumerate
+   list=['parin','mr.been','bob','raj']
+   for n,data in enumerate(list):
+      #enumerate return index with data
+      print(n,data)
+   
+   #import
+   """" File1 code
+   def hello():
+   print('hello')
+   """
+   import File1
+   print(__name__)
+   File1.hello()
+   
+   #__name__ or __main__
+   if __name__=='__main__':
+   print(__name__)
+   """File1 code
+   import upsidefile
+   #can't work in this file main function code because __main__ replace with file name
+   """
+   
+   #decorater
+   def fun1():
+   print('hello world')
+   fun2=fun1
+   del fun1
+   fun2()
+   
+   def output(out):
+   out('hello')
+   output(print)
+   
+   def deco(fun):
+   fun()
+   
+   @deco
+   def hello():
+   print('hello mr.been')
+   
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    hello
+    hi mr.been
+    10
+    [[9, 2], [5, 3], [7, 3], [2, 5]]
+    hello freind! mr.been
+    mr.been (['parin', 'aksha', 'bob', 'raj'],)
+    mr.been {'name': 'N', 'sername': 'S'}
+    0 parin
+    1 mr.been
+    2 bob
+    3 raj
+    __main__
+    hello
+    __main__
+    hello world
+    hello
+    hello mr.been
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="oop" id="bg">
+<h3 class="pl-2 sea">oop In Python</h3>
+<pre>
+<code class="language-python">
+   #simple class
+   class student:
+      pass
+   s1=student()
+   s2=student()
+   s1.name='mr.been'
+   s2.name='jadu'
+   print(s1.name)
+   
+   #constructer in class
+   class student:
+      def __init__(self,name,rollno,div):
+         self.name=name
+         self.rollno=rollno
+         self.div=div
+   
+   s1=student('mr.been',1,'A')
+   print(s1.name,s1.rollno,s1.div)
+   
+   #classmethod
+   class student:
+      total_student=50
+      def __init__(self,name,rollno,div):
+         self.name=name
+         self.rollno=rollno
+         self.div=div
+   
+   @classmethod
+   def addstu(cls,n):
+       cls.total_student=n
+   
+   s1=student('mr.been',1,'A')
+   print(s1.name,s1.rollno,s1.div)
+   s1.addstu(6)
+   student.addstu(78)
+   print(s1.total_student)
+   
+   #classmethod as a constructer
+   class student:
+      def __init__(self,name,rollno,div):
+         self.name=name
+         self.rollno=rollno
+         self.div=div
+   
+   @classmethod
+   def setdata(cls,str):
+      str=str.split('-')
+      return cls(str[0],str[1],str[2])
+   
+   s1=student.setdata('mr.been-1-A')
+   print(s1.name,s1.rollno,s1.div)
+   
+   #upside program part shortcut
+   class student:
+      def __init__(self,name,rollno,div):
+         self.name=name
+         self.rollno=rollno
+         self.div=div
+   
+   @classmethod
+   def setdata(cls,str):
+   return cls(*str.split('-'))
+   
+   s1=student.setdata('mr.been-1-A')
+   print(s1.name,s1.rollno,s1.div)
+   
+   #staticmethod
+   class student:
+      @staticmethod
+      def hello():
+         print('hello friends')
+   
+   s1=student()
+   s1.hello()
+   student.hello()
+   
+   #single level inheritance with constructer inheritance
+   class student:
+      def __init__(self,name,rollno,div):
+         self.name=name
+         self.rollno=rollno
+         self.div=div
+   
+   @staticmethod
+   def note():
+      print("all student note it kal raja he")
+   
+   class stu(student):
+      def __init__(self,name,rollno,div,mark):
+         super().__init__(name,rollno,div)
+         self.mark=mark
+   
+   s1=stu('ram','0','A',66)
+   print(s1.name)
+   print(s1.mark)
+   s1.note()
+   
+   #multileval inheritance
+   class student:
+      def __init__(self,name,rollno,div):
+         self.name=name
+         self.rollno=rollno
+         self.div=div
+   
+   class mark:
+      @staticmethod
+      def a1():
+         print('ohh 90 up try again')
+   
+   class stu(student,mark):
+      pass
+   
+   s1=stu('mr.been',1,'A')
+   print(s1.name)		
+   stu.a1()
+   
+   #public ,private, protected
+   class mark:
+      def __init__(self,name,rollno,div):
+         self.name=name #public
+         self._rollno=rollno #protected
+         self.__div=div #private
+   
+   #operater overloding dunder method
+   class student:
+      def __init__(self,name,rollno):
+         self.name=name
+         self.rollno=rollno
+   
+   def __add__(self,other):
+      return self.name+other.name
+   
+   def __truediv__(self,other):
+      return self.rollno/other.rollno
+   
+   def __repr__(self):
+      return f"{self.name},{self.rollno}"
+   
+   def __str__(self):
+      return f"{self.name},{self.rollno}"
+   
+   s1=student('mr.been',5)
+   s2=student('hello',7)
+   print(s1+s2)
+   print(s1/s2)
+   print(s1)
+   print(str(s1))
+   
+   #abstructmethod
+   #from abc import ABC,abstractmethod
+   from abc import ABCMeta,abstractmethod
+   class stu(metaclass=ABCMeta):
+   #class stu(ABC)
+      @abstractmethod
+      def stu(self):
+         return 0
+   class student(stu):
+      def stu(self):
+         return 'hi'
+   
+   s1=student()
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    mr.been
+    mr.been 1 A
+    mr.been 1 A
+    78
+    mr.been 1 A
+    mr.been 1 A
+    hello friends
+    hello friends
+    ram
+    66
+    all student note it kal raja he
+    mr.been
+    ohh 90 up try again
+    mr.beenhello
+    0.7142857142857143
+    mr.been,5
+    mr.been,5
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="spd" id="bg">
+<h3 class="pl-2 sea">setter property deleter</h3>
+<pre>
+<code class="language-python">
+   #setter,deleter,property
+   class emp:
+      def __init__(self,name,worktype):
+         self.name=name
+         self.worktype=worktype
+         #email=f'{name}@aone.com'
+   
+      def detail(self):
+         return self.name,self.worktype
+   
+      @property
+      #property function call without () brekat
+      def email(self):
+         if self.name==None:
+            return 'Not exists'
+            return f'{self.name}@aone.com'
+   
+      @email.setter
+      def email(self,str):
+         self.name=str.split('@')[0]
+   
+      @email.deleter
+      def email(self):
+         self.name=None
+         self.worktype=None
+   
+   e1=emp('bob','fulltime')
+   print(e1.detail())
+   print(e1.email)
+   e1.name='mr.been'
+   print(e1.email)
+   
+   e1.email='ad@aone.com'
+   print(e1.name)
+   print(e1.email)
+   
+   del e1.email
+   print(e1.email)
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    ('bob', 'fulltime')
+    bob@aone.com
+    mr.been@aone.com
+    ad
+    ad@aone.com
+    Not exists
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="lfc" id="bg">
+<h3 class="pl-2 sea">for else loop,forloop in list, function caching</h3>
+<pre>
+<code class="language-python">
+   #list comprehensions
+   ls=[i for i in range(20) if i%2==0]
+   print(ls)
+   
+   dict1={i : f'id{i}' for i in range(5)}
+   print(dict1)
+   dict2={value:key for key,value in dict1.items()}
+   print(dict2)#{key=value:value=key}
+   
+   set={id for id in [1,2,1,2,1,2]}
+   print(type(set))
+   print(set)#sem data only one time
+   
+   data=(i for i in range(50) if i%3==0)
+   print(type(data))
+   print(data.__next__())
+   print(data.__next__())
+   #use loop for print all
+   
+   #for else loop
+   for i in range(5):
+      pass
+   else:
+      print('full loop run')
+   
+   for i in range(5):
+      if(i==3):
+         break
+      else:
+         print('not run it see output')
+         #when for loop fully run else block execute
+   
+   #function caching
+   """
+   Function caching allows us to cache the return values of a function depending on the arguments. It can save time when an I/O bound function is periodically called with the same arguments. ... In Python 3.2+ there is an lru_cache decorator which allows us to quickly cache and uncache the return values of a function.
+   -Ex. aek function ne run thava ma 10 minitue lage che ane e function ne pacho run karvo hoy to pachi 10 minite lage (time is many) so solution is function caching it store function output when run program and have Aa function
+   ne pacho run karo to have output function nu output stor hoy te male function run no thay time bache.
+   """
+   import time
+   from functools import lru_cache
+   
+   @lru_cache(maxsize=3)
+   def working(n):
+   time.sleep(n)
+   return n
+   
+   if __name__=='__main__':
+      print('work start')
+      working(3)
+      print('work agian')
+      working(3)
+      print('done')
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+    {0: 'id0', 1: 'id1', 2: 'id2', 3: 'id3', 4: 'id4'}
+    {'id0': 0, 'id1': 1, 'id2': 2, 'id3': 3, 'id4': 4}
+    <class 'set'>
+    {1, 2}
+    <class 'generator'>
+    0
+    3
+    full loop run
+    work start
+    work agian
+    done
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="tcr" id="bg">
+<h3 class="pl-2 sea">try catch raise</h3>
+<pre>
+<code class="language-python">
+   try:
+      add()
+   except Exception as e:
+      print(e)
+   
+   #raise
+   #many type of Exception Ex.ValueError,Zerodivisionerror
+   """
+   n=input('Enter data:-')
+   if n.isnumeric():
+      raise Exception('data not allowed ')
+   else:
+      print(n)
+   """
+   name=input('Enter Name:-')
+   try:
+      print(v)
+   except Exception as e:
+      if(name=='mr.been'):
+         raise ValueError('blocked user')
+         print('welcom')
+</code>
+</pre>
+<div class="card">
+<div class="card-body"><h5>output</h5>
+<pre>
+  <code class="language-python">
+    name 'add' is not defined
+    Enter Name:-mr.been
+    Traceback (most recent call last):
+    File "<string>", line 17, in <module>
+    NameError: name 'v' is not defined
+    During handling of the above exception, another exception occurred:
+    Traceback (most recent call last):
+    File "/data/user/0/ru.iiec.pydroid3/files/accomp_files/iiec_run/iiec_run.py", line 31, in <module>
+    start(fakepyfile,mainpyfile)
+    File "/data/user/0/ru.iiec.pydroid3/files/accomp_files/iiec_run/iiec_run.py", line 30, in start
+    exec(open(mainpyfile).read(),  __main__.__dict__)
+    File "<string>", line 20, in <module>
+    ValueError: blocked user
+   
+  </code>
+ </pre> 
+</div>
+</div>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="cpkg" id="bg">
+<h3 class="pl-2 sea">create package</h3>
+<pre>
+<code class="language-python">
+   #folder structure
+   ->pkgfolder
+     ->license.txt
+     ->readme.md
+     ->pkgbeen
+       ->__init__.py
+       ->folder1
+         ->__init__.py
+         ->add.py
+         #add many file
+       ->folder2
+         ->convert.py
+         #add many file
+     ->setup.py
+ ###################################
+ some_root_dir/
+ |-- README
+ |-- setup.py
+ |-- an_example_pypi_project
+ |   |-- __init__.py
+ |   |-- useful_1.py
+ |   |-- useful_2.py
+ |-- tests
+ |-- |-- __init__.py
+ |-- |-- runall.py
+ |-- |-- test0.py
+ 
+ """setup.py code
+ 
+ from setuptools import setup
+ 
+ setup(
+ name = "an_example_pypi_project",
+ version = "0.0.4",
+ author = "Andrew Carter",
+ author_email = "andrewjcarter@gmail.com",
+ description = ("An demonstration of how to create, document, and publish "
+ "to the cheese shop a5 pypi.org."),
+ license = "BSD",
+ keywords = "example documentation tutorial",
+ url = "http://packages.python.org/an_example_pypi_project",
+ packages=['an_example_pypi_project', 'tests'],
+ long_description=read('README'),
+ classifiers=[
+ "Development Status :: 3 - Alpha",
+ "Topic :: Utilities",
+ "License :: OSI Approved :: BSD License",
+ ],
+ """
+ 
+ command
+ #open code folder
+ ->pip install wheel
+ ->python setup.py sdist bdist_wheel
+ ->pip install your_wheel_file_name
+ ->python
+ ->import your_pkgname
+ #wheel_file create in folder check
+</code>
+</pre>
+</div>
+<!--use it -->
+<!-- all edit here  just add in a title sea for search-->
+<!--start-->
+
+<!--***edit*** -->
+<!--***edit*** -->
+
+</div>
+<!--&&-->
+</div>
+<!-- end block -->
+</div>
+<!-- end code -->
+
+<script type="text/javascript">
+ var serchid=document.getElementById("searchinput");
+ var ids=document.getElementsByClassName("sea");
+ function search() 
+ {
+   var serchtext=serchid.value;
+   for(var i=0;i<ids.length;i++){
+     var data=ids[i].innerHTML.toLowerCase();
+     var serchtext=serchtext.toLowerCase();
+     if(data.includes(serchtext)) 
+     {
+      ids[i].parentElement.style.display="block";
+     }
+     else
+     {
+      ids[i].parentElement.style.display="none";
+     }
+   }
+ }
+</script>
+<script src="ForCode/folder/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
