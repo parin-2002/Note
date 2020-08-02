@@ -419,6 +419,681 @@ html
 </div>
 </div>
 
+<div class="card py-2 px-2 mt-2" id="sapi">
+<h3 class="pl-2 sea">Simple API</h3>
+<pre>
+<code class="language-javascript">
+    //run in postman
+    var http=require('http');
+    http.createServer(function(req,res)
+    {
+    res.write('hello');
+    res.end();
+    }).listen(5000);
+    //nodemon use if file code change auto server restart
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="jd">
+<h3 class="pl-2 sea">pass json data in nodejs</h3>
+<pre>
+<code class="language-javascript">
+    //second Example API Pass JSON DATA
+    var http=require('http');
+    http.createServer(function(req,res) 
+    {
+    data={ name:'mr.been', 
+    job:'time pass' }
+    res.writeHead(200,{'Content-Type':'application/json'});
+    res. write(JSON.stringify(data));
+    res.end();
+    }) .listen(8000);
+    
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="hd" id="bg">
+<h3 class="pl-2 sea">HTML Code pass</h3>
+<pre>
+<code class="language-javascript">
+    //html code pass
+    var http=require('http');
+    http.createServer(function(req,res) 
+    {
+    res.writeHead(200, {'Content-Type':'text/html'});
+    res.write('<input type="text">') ;
+    res.end();
+    }).listen(5000);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="fr" id="bg">
+<h3 class="pl-2 sea">File Read And Pass</h3>
+<pre>
+<code class="language-javascript">
+    //File Read And Passa
+    var http=require('http');
+    var fs=require('fs');
+    http.createServer(function(req,res)
+    {
+    fs.readFile('filename.html',function(error, data)
+    {
+    res.writeHead(200,{'Contant-Type':'text/html'});
+    res.write(data);
+    return res.end();
+    });
+    }).listen(5000);
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="db" id="bg">
+<h3 class="pl-2 sea">Database Connection And Select Data</h3>
+<pre>
+<code class="language-javascript">
+    //database connection and select data
+    var mysql=require('mysql');
+    var con=mysql.createConnection({
+    host:'localhost', 
+    user:'root', 
+    password:'', 
+    database:'bob'
+    });
+    con.connect(function(error)
+    {
+    if(error) 
+    {
+    throw error;
+    }
+    else
+    {
+    console.log('connected');
+    con.query("select * from users",function(error,result)
+    {
+    if(error) 
+    {throw error;}
+    console.log(result);
+    });
+    }
+    });
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="ev" id="bg">
+<h3 class="pl-2 sea">Event</h3>
+<pre>
+<code class="language-javascript">
+    //event
+    var fs=require('fs');
+    var read=fs.createReadStream('file1.txt');
+    read.on('open',function() 
+    {
+    console.log('file open');
+    });
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="cu" id="bg">
+<h3 class="pl-2 sea"> Custom Event</h3>
+<pre>
+<code class="language-javascript">
+    //custom events
+    var events=require('events');
+    var eventEmitter=new events.EventEmitter();
+    
+    eventEmitter.on('say',function(name)
+    {
+    console.log(name, 'is say');
+    });
+    
+    eventEmitter.emit('say','mr.been');
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="ds" id="bg">
+<h3 class="pl-2 sea">Directory Structure</h3>
+<pre>
+<code class="language-javascript">
+    //wait now I am learning
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="se" id="bg">
+<h3 class="pl-2 sea">Start Expressjs</h3>
+<pre>
+<code class="language-javascript">
+    //express
+    //starting
+    //expressjs is a framework of a nodejs
+    const express=require('express');
+    const app=express();
+    
+    app.get('/',function(req,res)
+    { 
+    res.send('done');
+    });
+    
+    app.get('/home',function(req,res) 
+    {
+    res.send('home');
+    });
+    
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="ru" id="bg">
+<h3 class="pl-2 sea">Routeing in expressjs</h3>
+<pre>
+<code class="language-javascript">
+    //routing in express
+    const express=require('express');
+    const app=express();
+    
+    app.get('/', function(req, res)
+    {
+    res.send('welcom');
+    });
+    
+    app.get('/about',function(req,res) 
+    {
+    res.send('about');
+    });
+    
+    app.post('/login',function(req,res) 
+    {
+    res.send('login post');
+    });
+    
+    app.put('/login',function(req,res)
+    {
+    res.send('login put');
+    });
+    
+    app.delete('/login',function(req,res) 
+    {
+    res.send('login delete');
+    });
+    app.listen(5000);
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="mi" id="bg">
+<h3 class="pl-2 sea"> Middleware</h3>
+<pre>
+<code class="language-javascript">
+    //middle ware
+    /*
+    output
+    $ node express.js
+    /
+    /about
+    */
+    const express=require('express');
+    var app=express();
+    
+    var checkUrl=function(req,res,next) 
+    {
+    console.log(req.url);
+    next();
+    }
+    app.use(checkUrl);
+    app.get('/',function(req,res)
+    {
+    res.send('home');
+    });
+    app.get('/about',function(req,res) 
+    {
+    res.send('about');
+    });
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="rmi" id="bg">
+<h3 class="pl-2 sea">Routed Middleware</h3>
+<pre>
+<code class="language-javascript">
+    //routed middleware
+    const express=require('express');
+    var app=express();
+    var router=express.Router();
+    var checkUrl=function(req,res,next) 
+    {
+    console.log(req.url);
+    next();
+    }
+    app.get('/',function(req,res)
+    {
+    res.send('home');
+    });
+    router.get('/about',checkUrl,function(req,res) 
+    {
+    res.send('about');
+    });
+    
+    app.use('/',router);
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="sfr" id="bg">
+<h3 class="pl-2 sea">send file as a response</h3>
+<pre>
+<code class="language-javascript">
+    //send file as a response in expressjs
+    const express=require('express');
+    var app=express();
+    
+    app.get('/',function(req, res)
+    {
+    res.sendFile(__dirname+"/index.html");
+    });
+    
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="te" id="bg">
+<h3 class="pl-2 sea"> Template Engine</h3>
+<pre>
+<code class="language-javascript">
+    //express Template Engine
+    //npm install ejs --save
+    //create views file in working directory
+    //all ejs Template make in view folder
+    /* profile.ejs 
+    <|h1>welcom To!  <%= name %><|h1>
+    */
+    const express=require('express');
+    var app=express();
+    
+    app.set('view engine','ejs');
+    app.get('/profile/:name',function(req, res){
+    console.log(req.params.name);
+    res.render("profile",{name:req.params.name});
+    });
+    
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="pdp" id="bg">
+<h3 class="pl-2 sea">Pass Dynamic Data In Template</h3>
+<pre>
+<code class="language-javascript">
+    //pass dynamic data
+    /* profile.ejs
+    <|h1>welcom To!  <%= name %><|h1>
+    <|h1><%= data.work %><|/h1>
+    <|h5><%=  data. framework[0] %><|/h5>
+    <|h5><%=  data.framework[1]%><|/h5>
+    */
+    /* using forEach loop 
+    <|h1>welcom<|h1>
+    <|h1><%= data.work %><|/h1>
+    <|ul>
+    <% data.framework.forEach(function(item){ %>
+    <|li><%= item%><|/li>
+    <% }) %>
+    <|/ul>
+    */
+    const express=require('express');
+    var app=express();
+    
+    app.set('view engine','ejs');
+    app.get('/profile',function(req, res){
+    data={work:'javascript',framework:['node', 'express']}
+    res.render("profile",{name:req.params.name,data:data});
+    });
+    
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="ti" id="bg">
+<h3 class="pl-2 sea"> Template Inheritance</h3>
+<pre>
+<code class="language-javascript">
+    //template inheritance in expressjs
+    /* views/common/nav.ejs
+    <|ul>
+    <|li><|a href="/">home<|/a><|/li>
+    <|li><|a href="/about">about<|/a><|/li>
+    <|/ul>
+    */
+    /*views/about.ejs
+    <%- include('common/nav'); -%>
+    <|h1>welcom To About<|/h1>
+    */
+    /*views/home.ejs
+    <%- include('common/nav'); -%>
+    <|h1>welcom To Home<|/h1>
+    */
+    //projectfolde/app.js
+    const express=require('express');
+    var app=express();
+    
+    app.set('view engine','ejs');
+    app.get('/', function(req,res){
+    res.render('home');
+    });
+    
+    app.get('/about',function(req,res){
+    res.render('about');
+    });
+    
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="sit" id="bg">
+<h3 class="pl-2 sea">static file in express</h3>
+<pre>
+<code class="language-javascript">
+    
+    //satatic file in expressjs
+    /* assets/style.css
+    body
+    {
+    background-color:blue;
+    color:white;
+    }
+    */
+    /* views/nav.ejs
+    <|link rel="stylesheet" href="/assets/style.css">
+    <|ul>
+    <|li><|a href="/">home<|/a><|/li>
+    <|li><|a href="/about">about<|/a><|/li>
+    <|/ul>
+    */
+    /* views/about.ejs
+    <%- include('common/nav'); -%>
+    <|h1>Welcom To about Page<|/h1>
+    */
+    /* views/home.ejs
+    <%- include('common/nav'); -%>
+    <|h1>Welcom To home Page<|/h1>
+    */
+    const express=require('express');
+    var app=express();
+    
+    app.use('/assets',express.static('assets'));
+    app.set('view engine','ejs');
+    app.get('/', function(req,res){
+    res.render('home');
+    });
+    
+    app.get('/about',function(req,res){
+    res.render('about');
+    });
+    
+    app.listen(4500);
+    
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="gfe" id="bg">
+<h3 class="pl-2 sea">GET Form in Expressj</h3>
+<pre>
+<code class="language-javascript">
+    //simple form in expressjs
+    /* views/login.ejs
+    <|h1>Welcom To login Page<|/h1>
+    <|form action="" method="get">
+    <|input type="text" name="name">
+    <|input type="text" name="surname">
+    <|input type="submit" >
+    <|/form>
+    */
+    const express=require('express');
+    var app=express();
+    
+    app.use('/assets',express.static('assets'));
+    app.set('view engine','ejs');
+    app.get('/login',function(req,res){
+    if(req.method=='GET') 
+    {
+    console.log(req.query);
+    //console.log(req.params);
+    }
+    res.render('login');
+    });
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="pfe" id="bg">
+<h3 class="pl-2 sea">POST Form In Expressjs</h3>
+<pre>
+<code class="language-javascript">
+    //FORM POST Request in Expressjs
+    //npm i body-parser
+    /* views/login.ejs
+    <|h1>Welcom To login Page<|/h1>
+    <|form action="/login" method="POST">
+    <|input type="text" name="name">
+    <|input type="text" name="surname">
+    <|input type="submit">
+    <|/form>
+    */
+    const express=require('express');
+    var app=express();
+    var Bparser=require('body-parser');
+    var encoder=Bparser.urlencoded();
+    app.use('/assets',express.static('assets'));
+    app.set('view engine','ejs');
+    
+    app.post('/about',encoder,function(req,res){
+    console.log('post request');
+    console.log(req.body);
+    res.render('about');
+    });
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
+<div class="card py-2 px-2 mt-2" id="mo" id="bg">
+<h3 class="pl-2 sea">mongodb database code</h3>
+<pre>
+<code class="language-javascript">
+    
+    //mongodb cloud connection 
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const app=express();
+    mongoose.connect('nodjs url',
+    {
+    useNewUrlParser:true, 
+    useunifiedTopology:true
+    }).then(()=>{
+    console.log('connection done');
+    });
+    
+    //////////////////////////
+    //mongodb connection is select all data
+    /*model of database  user.js   why name user because table name user
+    const mongoose=require('mongoose');
+    let userSchema=new mongoose.Schema({
+    _id:mongoose.Schema.Types.ObjectId, 
+    name:String, 
+    email:String, 
+    age:String
+    });
+    module.exports=mongoose.model('user', userSchema);
+    */
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const user=require('./user');
+    const app=express();
+    mongoose.connect('mongodb+srv://parin:USJ7KjOjEoMuCKFP@cluster0.dyut5.mongodb.net/bob?retryWrites=true&w=majority',
+    {
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+    });
+    
+    user.find({},function(err,user) 
+    {
+    if(err) {console.log(err);}
+    console.log(user);
+    });
+    
+    ///////////////////////
+    //insert data in mongodb
+    /* models/users.js
+    const mongoose=require('mongoose');
+    let userSchema=new mongoose.Schema({
+    _id:mongoose.Schema.Types.ObjectId, 
+    name:String, 
+    email:String, 
+    age:String
+    });
+    module.exports=mongoose.model('users', userSchema);
+    */
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const users=require('./models/user');
+    const app=express();
+    mongoose.connect('mongodb+srv://parin:USJ7KjOjEoMuCKFP@cluster0.dyut5.mongodb.net/bob?retryWrites=true&w=majority',
+    {
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+    });
+    
+    const data=new users({
+    _id:mongoose.Types.ObjectId(), 
+    name:"hi", 
+    email:"hi@gmail.com", 
+    age:"50"
+    });
+    
+    data.save().then(function(result)
+    {console.log(result);}).catch(function(err) {console.log(err);});
+    
+    /////////////////////////
+    //api get request 
+    //model code same to same upside model code
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const users=require('./models/user');
+    const app=express();
+    mongoose.connect('mongodb+srv://parin:USJ7KjOjEoMuCKFP@cluster0.dyut5.mongodb.net/bob?retryWrites=true&w=majority',
+    {
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+    });
+    
+    app.get('/',function(req,res)
+    {
+    users.find().then((data)=>
+    {
+    res.status(200).json(data);
+    });
+    });
+    app.listen(4500);
+    
+    /////////////////////
+    //post request in api in 
+    //model same
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const users=require('./models/user');
+    const bodyParser=require('body-parser');
+    const jsonp=bodyParser.json();
+    const app=express();
+    mongoose.connect('mongodb+srv://parin:USJ7KjOjEoMuCKFP@cluster0.dyut5.mongodb.net/bob?retryWrites=true&w=majority',
+    {
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+    });
+    
+    app.post('/user',jsonp,function(req,res) 
+    {
+    const data=new users({
+    _id:mongoose.Types.ObjectId(), 
+    name:req.body.name, 
+    email:req.body.email, 
+    age:req.body.age
+    });
+    data.save().then(result=>console.log('ok')).catch(err=>console.log(err));
+    res.end(req.body.name);
+    });
+    app.listen(4500);
+    
+    /////////////////////
+    //delete
+    //some problem and same module
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const users=require('./models/user');
+    const bodyParser=require('body-parser');
+    const jsonp=bodyParser.json();
+    const app=express();
+    mongoose.connect('mongodb+srv://parin:USJ7KjOjEoMuCKFP@cluster0.dyut5.mongodb.net/bob?retryWrites=true&w=majority',
+    {
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+    });
+    
+    app.delete('/user/:id', function(req,res) 
+    {
+    users.deleteOne({_id:req.params.id}).then(re=>res.status(200).json(re)).catch(err=>console.log(err));
+    });
+    app.listen(4500);
+    //////////////////////
+    //put/updated data
+    const express=require('express');
+    const mongoose=require('mongoose');
+    const users=require('./models/user');
+    const bodyParser=require('body-parser');
+    const jsonp=bodyParser.json();
+    const app=express();
+    mongoose.connect('mongodb+srv://parin:USJ7KjOjEoMuCKFP@cluster0.dyut5.mongodb.net/bob?retryWrites=true&w=majority',
+    {
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+    });
+    
+    app.put('/user/:id',jsonp,function(req,res) 
+    {
+    users.updateOne({_id:req.params.id },
+    {$set:{name:req.body.name,
+    email:req.body.email
+    }}
+    ).then(re=>console.log('ok')).catch(err=>console.log(err));
+    });
+    app.listen(4500);
+</code>
+</pre>
+</div>
+
 <!--use it -->
 
 </div>
