@@ -169,6 +169,10 @@ html
   <div class="card pt-2 pl-2 mt-1">
    <a href="#mo" class="mb-1 text-dark"><h6 class="h6">mongodb database code </h6></a>
   </div>
+
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#videostr" class="mb-1 text-dark"><h6 class="h6">Streaming using pipe</h6></a>
+  </div>
   <!-- yes it used-->
   
  </div>
@@ -1185,6 +1189,62 @@ html
 </pre>
 </div>
 
+<div class="card py-2 px-2 mt-2" id="videostr" id="bg">
+<h3 class="pl-2 sea">POST Form In Expressjs</h3>
+<pre>
+<code class="language-javascript">
+    //in node
+const http=require('http') 
+const fss=require('fs')
+
+
+http.createServer((req, res)=>{
+res.setHeader('Content-Type','video/mp4')
+let rs=fss.createReadStream('video.mp4') 
+rs.on('open',()=>rs.pipe(res)) 
+rs.on('error',(err)=>res.end(err)) 
+}).listen(3000)
+
+//in express
+/*
+const express=require('express')
+const app=express()
+const fs=require('express')
+app.get('/',(req,res)=>{
+  res.setHeader('Content-Type','video/mp4')
+  let rs=fss.createReadStream('video.mp4') 
+  rs.on('open',()=>rs.pipe(res)) 
+  //rs.pipe(res))
+  rs.on('error',(err)=>res.send(err)) 
+}) 
+app.listen(3000)
+*/
+
+/*
+//serve-video.js
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+	console.log("Port Number : 3000");
+	// change the MIME type to 'video/mp4'
+    res.writeHead(200, {'Content-Type': 'video/mp4'});
+    fs.exists('video.mp4',function(exists){
+		if(exists)
+		{
+			var rstream = fs.createReadStream('video.mp4');
+			rstream.pipe(res);
+		}
+		else
+		{
+			res.send("Its a 404");
+			res.end();
+		}
+	});
+}).listen(3000);					
+*/
+</code>
+</pre>
+</div>
 <!--use it -->
 
 </div>
