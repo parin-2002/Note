@@ -173,6 +173,10 @@ html
   <div class="card pt-2 pl-2 mt-1">
    <a href="#videostr" class="mb-1 text-dark"><h6 class="h6">Streaming using pipe</h6></a>
   </div>
+
+  <div class="card pt-2 pl-2 mt-1">
+   <a href="#promise" class="mb-1 text-dark"><h6 class="h6">Promise Also async & await</h6></a>
+  </div>
   <!-- yes it used-->
   
  </div>
@@ -1242,6 +1246,59 @@ http.createServer(function (req, res) {
 	});
 }).listen(3000);					
 */
+</code>
+</pre>
+</div>
+
+
+<div class="card py-2 px-2 mt-2" id="promise" id="bg">
+<h3 class="pl-2 sea">GET Form in Expressj</h3>
+<pre>
+<code class="language-javascript">
+    //short method promise
+async function addnumber(a,b)
+{
+ if(typeof(a)=='number'&&typeof(b)=='number'){
+  return a+b;
+  }
+  return 'not possible';
+}
+
+async function operation(a,b)
+{
+ const result= await addnumber(a,b)
+ console.log(result)
+}
+
+operation(7,6)
+
+//you can't able to use catch
+/*Note:- async function always return promise. 
+       - you can't use await outside of async function
+       - up side code is short method
+       - you can use then also for this method but catch can't usable
+       - error or result return but only one side return mens one variable stor error or result      
+*/
+////////////////////////////////////////
+////////////////////////////////////////
+//log method promise
+function addnumber(a,b)
+{
+ return new Promise((resolve,reject)=>{
+   if(typeof(a)=='number'&&typeof(b)=='number'){
+    resolve(a+b) 
+   }
+   else {
+    reject("not possible") 
+   }
+ })
+}
+
+addnumber(6,7)
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
+
+//you are able to use then or catch then provide result or catch provide error
 </code>
 </pre>
 </div>
